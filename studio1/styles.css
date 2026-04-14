@@ -1,6 +1,19 @@
 body{
     overflow: hidden;
+    background-color: blue;
+    transition: background-color 0.4s ease;
 }
+
+.fa-water {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 75px;
+    color: white;
+    transform: translate(-50%, -50%);
+    animation: water 2s infinite alternate ease-in-out;
+  }
+  
 #myVideo{
     position: fixed;
     bottom: 0;
@@ -42,6 +55,8 @@ body{
     font-style: italic;
     transform: translateY(-180%);
     opacity: 0%;
+    pointer-events: auto;
+    transition: color 0.4s ease;
 }
 #line1 {
     left: 20%;
@@ -60,6 +75,20 @@ body{
     animation-delay: 4s;
 }
 
+@keyframes water {
+    0% {
+      opacity: .5;
+      
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: .5;
+     
+    }
+  }
+  
 
 @keyframes dropText {
     0% {
