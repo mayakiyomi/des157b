@@ -24,7 +24,7 @@ body{
     z-index: -1;
 }
 
-
+/* bring to front so that icon can be clicked */
 .fa-expand{
     position: absolute;
     top: 10px;
@@ -58,6 +58,7 @@ body{
     pointer-events: auto;
     transition: color 0.4s ease;
 }
+/* animation delays to create diagonal effect */
 #line1 {
     left: 20%;
     animation: dropText 8s linear infinite;
@@ -74,7 +75,7 @@ body{
     animation: dropText 8s linear infinite;
     animation-delay: 4s;
 }
-
+/* if preloader is on for a long time, users will see water icon's opacity pulse */
 @keyframes water {
     0% {
       opacity: .5;
@@ -89,7 +90,7 @@ body{
     }
   }
   
-
+/* top to bottom animation for lines of text */
 @keyframes dropText {
     0% {
         transform: translate(-50%, -120%);
