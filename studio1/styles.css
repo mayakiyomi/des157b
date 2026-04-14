@@ -1,0 +1,79 @@
+body{
+    overflow: hidden;
+}
+#myVideo{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: grayscale(.9) opacity(.8);
+    z-index: -1;
+}
+
+
+.fa-expand{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 36px;
+    color: white;
+    z-index: 2;
+}
+
+.fa-expand:hover{
+    cursor:pointer;
+}
+
+#mySection {
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#mySection p {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 3rem;
+    color: blue;
+    mix-blend-mode:difference;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    transform: translateY(-180%);
+    opacity: 0%;
+}
+#line1 {
+    left: 20%;
+    animation: dropText 8s linear infinite;
+}
+
+#line2 {
+    left: 50%;
+    animation: dropText 8s linear infinite;
+    animation-delay: 2s;
+}
+
+#line3 {
+    left: 80%;
+    animation: dropText 8s linear infinite;
+    animation-delay: 4s;
+}
+
+
+@keyframes dropText {
+    0% {
+        transform: translate(-50%, -120%);
+        opacity: .1;
+    }
+    15% {
+        opacity: .5;
+    }
+    85% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, 120vh);
+        opacity: 1;
+    }
+}
