@@ -6,11 +6,12 @@
     const loader = document.querySelector('.fa-water');
     const body = document.querySelector('body');
     const lines = document.querySelectorAll('#mySection p');
+/* preloader (template from video api slides) */
     myVideo.addEventListener('playing', function() {
         loader.style.display = 'none';
         body.style.backgroundColor = 'white';
       })
-
+/*fullscreen */
     expand.addEventListener('click', function(){
         if (!document.fullscreenElement){
             document.documentElement.requestFullscreen();
@@ -19,6 +20,7 @@
         }
     });
 
+/* foreach loop to parse through each line of text and add event listener to invert video */
     lines.forEach(line => {
         line.addEventListener('mouseover', () => {
             body.style.backgroundColor = 'blue';
