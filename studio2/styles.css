@@ -1,0 +1,64 @@
+body {
+    background-color: #002F32;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 400;
+    color: #FFFEF3;
+}
+
+body.switch {
+    background-color: #384A0B;
+}
+
+h1{
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+    color: #C3F93B;
+    font-size: 3em;
+}
+
+main{
+    margin: 0 auto;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 30px;
+    align-items: flex-end;
+}
+
+#data{
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+#chart {
+    margin-top: 40px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+}
+
+.label {
+    width: 60px;
+    text-align: right;
+    margin-right: 12px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.bar {
+    height: 30px;
+    background-color: #C3F93B;
+    border-radius: 4px;
+}
+
+@media only screen and (min-width: 600px) {
+    main{
+        flex-direction: row;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
