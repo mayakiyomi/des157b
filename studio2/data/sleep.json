@@ -1,6 +1,7 @@
 {
     "point1": {
       "date": "April 12",
+      "label": "04.12",
       "sleepTime": "01:45 AM",
       "wakeTime": "10:30 AM",
       "hours": 8.75,
@@ -8,6 +9,7 @@
     },
     "point2": {
       "date": "April 13",
+      "label": "04.13",
       "sleepTime": "12:25 AM",
       "wakeTime": "08:15 AM",
       "hours": 7.83,
@@ -15,6 +17,7 @@
     },
     "point3": {
       "date": "April 14",
+      "label": "04.14",
       "sleepTime": "12:00 AM",
       "wakeTime": "07:30 AM",
       "hours": 7.5,
@@ -22,6 +25,7 @@
     },
     "point4": {
       "date": "April 15",
+      "label": "04.15",
       "sleepTime": "12:30 AM",
       "wakeTime": "06:50 AM",
       "hours": 6.33,
@@ -29,6 +33,7 @@
     },
     "point5": {
       "date": "April 16",
+      "label": "04.16",
       "sleepTime": "11:30 PM",
       "wakeTime": "07:30 AM",
       "hours": 8,
@@ -36,6 +41,7 @@
     },
     "point6": {
       "date": "April 17",
+      "label": "04.17",
       "sleepTime": "12:45 AM",
       "wakeTime": "08:15 AM",
       "hours": 7.5,
@@ -43,6 +49,7 @@
     },
     "point7": {
       "date": "April 18",
+      "label": "04.18",
       "sleepTime": "10:30 PM",
       "wakeTime": "07:00 AM",
       "hours": 8.5,
@@ -50,6 +57,7 @@
     },
     "point8": {
       "date": "April 19",
+      "label": "04.19",
       "sleepTime": "11:00 PM",
       "wakeTime": "08:15 AM",
       "hours": 9.25,
@@ -57,6 +65,7 @@
     },
     "point9": {
       "date": "April 20",
+      "label": "04.20",
       "sleepTime": "10:45 PM",
       "wakeTime": "07:30 AM",
       "hours": 8.75,

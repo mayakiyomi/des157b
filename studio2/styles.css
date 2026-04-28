@@ -1,36 +1,55 @@
 body {
-    background-color: #002F32;
+    background-color: #384A0B;
     font-family: "Hanken Grotesk", sans-serif;
     font-weight: 400;
     color: #FFFEF3;
+    display: flex;
+    align-items: flex-end;
 }
 
-body.switch {
-    background-color: #384A0B;
-}
 
 h1{
     font-family: "DM Mono", monospace;
     font-weight: 500;
-    color: #C3F93B;
+    color: #A0F9FF;
     font-size: 3em;
 }
 
+h3 {
+    color: #A0F9FF;
+    margin-bottom: 10px;
+}
 main{
     margin: 0 auto;
-    min-width: 300px;
+    min-width: 900px;
     display: flex;
-    flex-direction: column;
-    padding: 40px;
-    gap: 30px;
     align-items: flex-end;
+    padding: 50px 80px 0 80px;
+    gap: 60px;
 }
 
+#title{
+    display: flex;
+    flex-direction: column;
+}
 #data{
     flex-grow: 1;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    
 }
+
+#stats{
+    height: 200px;
+    margin-bottom: 30px;
+    max-width: 300px;
+}
+
+#stats p {
+    margin: 4px 0;
+    color: #FFFEF3;
+}
+
 #chart {
     margin-top: 40px;
 }
@@ -39,26 +58,23 @@ main{
     display: flex;
     align-items: center;
     margin: 12px 0;
+    gap: 12px;
 }
 
 .label {
     width: 60px;
     text-align: right;
-    margin-right: 12px;
     font-size: 14px;
     color: #aaa;
 }
 
 .bar {
     height: 30px;
-    background-color: #C3F93B;
+    background-color: #FFFEF3;
     border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease; 
 }
-
-@media only screen and (min-width: 600px) {
-    main{
-        flex-direction: row;
-        padding-left: 80px;
-        padding-right: 80px;
-    }
+.bar:hover {
+    background-color: #A0F9FF;
 }
