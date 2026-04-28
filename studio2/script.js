@@ -25,7 +25,7 @@
         
         let maxHours = 0;
         /* find max amount of sleep  */
-        Object.values(data).forEach(point => {
+        Object.values(data).forEach(function(point){
             if (point.hours > maxHours) {
                 maxHours = point.hours;
             }
@@ -35,7 +35,7 @@
         const scale = 520; 
     
         /* create bars: create row, add label, set width of bar */
-        Object.values(data).forEach(point => {
+        Object.values(data).forEach(function(point){
             /* new row for bar */
             const row = document.createElement('div');
             row.classList.add('row');
@@ -55,14 +55,14 @@
             chart.appendChild(row);
 
             /* add stats to div when hovered */
-            bar.addEventListener('mouseover', () => {
+            bar.addEventListener('mouseover', function(){
                 statDate.textContent = point.date;
                 statTime.textContent = `${point.sleepTime} - ${point.wakeTime}`;
                 statHours.textContent = `${point.hours} hours`;
                 statReason.textContent = point.reason;
             });
             /* clear stats panel when unhovered */
-            bar.addEventListener('mouseout', () => {
+            bar.addEventListener('mouseout', function() {
                 statDate.textContent = "";
                 statTime.textContent = "";
                 statHours.textContent = "";
