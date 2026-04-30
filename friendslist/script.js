@@ -58,7 +58,7 @@
                 ${fname} ${lname}
                 </div>
                 <div class = "email">
-                    <i class = "fas fa-envelope-square".</i> ${email}
+                    <i class = "fas fa-envelope-square"</i> ${email}
                 </div>
                 <div class = "social">
                     <a href = "${facebook}"><i class = "fab fa-facebook-square"></i></a>
