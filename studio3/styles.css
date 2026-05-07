@@ -1,0 +1,96 @@
+body {
+    background: rgb(27, 41, 59);
+    color: white;
+    font-family: sans-serif;
+}
+
+main {
+    width: 90%;
+    margin: auto;
+    padding-top: 40px;
+}
+
+#text {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    margin: 0;
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+    color: #c8ee1d;
+    font-size: 4rem;
+}
+
+h2 {
+    margin-top: 10px;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 400;
+    color: #FFFEF3;
+}
+
+h3{
+    margin: 0;
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+    color: #c8ee1d;
+    font-size: 1.5rem; 
+}
+#workspace {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+canvas {
+    display: block;
+    cursor: pointer;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#picker {
+    width: 100px;
+    height: 100px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 15px;
+}
+
+#clear{
+    color: rgb(27, 41, 59);
+    background-color: #c8ee1d;
+    padding:15px;
+    width: 100px;
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    transition: .2s all ease-in-out;
+    cursor: pointer;
+}
+
+#clear:hover{
+    background-color: white;
+    
+}
+footer{
+    margin: 0 auto;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 400;
+    color: #FFFEF3;
+    text-align: center;
+    padding: 40px;
+}
+
+footer a{
+    text-decoration: none;
+    color: #c8ee1d
+}
