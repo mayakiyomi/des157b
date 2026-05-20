@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+    <style>
+        html {
+            background-color: #efefef;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            line-height: 1.4em;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Change this H1</h1>
+
+    <p>Add a short description of your function, what it does and where you got it. You can pull it from some other project you have, or you can create a function from scratch that does something simple and straight forward. Don't just use one of Bill and Glenda's examples though.</p>
+
+    <h2>Named Function</h2>
+    <code>
+        <pre>
+            green (header){
+                Change the color of the header to green. Super simple and awesome!
+            }
+        </pre>
+    </code>
+
+    <h2>Function Expression</h2>
+    <code>
+        <pre>
+            const green = function(selection){
+                selection.style.color = 'green';
+            }
+        </pre>
+    </code>
+
+    <h2>Arrow Function</h2>
+    <code>
+        <pre>
+            const green = (header) => header.style.color = 'green';
+        </pre>
+    </code>
+    <script>
+        heading = document.querySelector('h1');
+
+        const green = (selection) => selection.style.color = 'green';
+
+        green(heading);
+    </script>
+    <footer> Your Name </footer>
+    
+</body>
+</html>
