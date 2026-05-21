@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capstone Code v1</title>
+
+  <!-- normalize -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Hanken+Grotesk&display=swap" rel="stylesheet">
+
+  <!-- styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@2.2.2/lib/p5.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/parse/dist/parse.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <section id="intro">
+      <h1>CREATE!</h1>
+      <h2>Fill the canvas with color</h2>
+    </section>
+
+    <section id="workspace">
+      <div id="canvas-container"></div>
+
+      <div id="controls">
+        <h3>CLICK TO <br> PICK A COLOR</h3>
+        <input type="color" id="picker" value="#ff00ff">
+        <button id="clear">CLEAR</button>
+        <button id="save">SAVE DRAWING</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Made with <a href="https://p5js.org/">p5.js</a> and <a href="https://jquery.com/">jQuery</a>
+  </footer>
+</body>
+
+</html>
