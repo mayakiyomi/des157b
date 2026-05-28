@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drawing Gallery</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Hanken+Grotesk&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="gallery.css">
+
+  <script type="text/javascript" src="https://unpkg.com/parse/dist/parse.min.js"></script>
+  <script src="gallery.js" defer></script>
+</head>
+<body>
+  
+    <header id="gallery-header">
+        <div class="gallery-marquee-wrap">
+          <div class="gallery-marquee">
+            <span>GALLERY * GALLERY * GALLERY * GALLERY * GALLERY * GALLERY * </span>
+          </div>
+          <div class="gallery-marquee gallery-marquee-two">
+            <span>GALLERY * GALLERY * GALLERY * GALLERY * GALLERY * GALLERY * </span>
+          </div>
+        </div>
+    </header>
+
+    <main>    
+        <section id="gallery"></section>
+    </main>
+
+  <div id="modal" class="hidden">
+    <div id="modal-content">
+      <button id="modal-close" aria-label="Close modal">×</button>
+
+      <button id="modal-prev" class="modal-nav" aria-label="Previous drawing">‹</button>
+      <button id="modal-next" class="modal-nav" aria-label="Next drawing">›</button>
+
+      <img id="modal-image" src="" alt="">
+      <div id="modal-text">
+        <h2 id="modal-title"></h2>
+        <p id="modal-name"></p>
+        <p id="modal-age"></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

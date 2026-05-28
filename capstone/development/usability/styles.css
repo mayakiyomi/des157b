@@ -1,0 +1,289 @@
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #034a0d;
+  color: #d7fab6;
+}
+
+main {
+  padding: 2rem;
+}
+
+#workspace {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+#canvas-container {
+  background: white;
+  border: 1px solid #444;
+}
+
+#intro-overlay {
+  position: fixed;
+  inset: 0;
+  background: #034a0d;
+  color: #d7fab6;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.marquee-wrap {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 35vh;
+}
+
+.marquee {
+  display: inline-block;
+  width: max-content;
+  animation: marquee 12s linear infinite;
+  font-family: 'DM Mono', monospace;
+  font-size: clamp(4rem, 8vw, 6rem);
+  letter-spacing: 0.08em;
+}
+
+.marquee-two {
+  animation-direction: reverse;
+  margin-top: 1rem;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+#begin-btn {
+  margin-bottom: 7rem;
+  padding: 0.9rem 1.4rem;
+  border: 1px solid #d7fab6;
+  background: transparent;
+  color: #d7fab6;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all .3s ease-in-out
+}
+
+#begin-btn:hover {
+  background: #d7fab6;
+  color: #034a0d;
+}
+
+#controls {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 1rem;
+  background: #d7fab6;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+#tools-panel,
+#form-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#tools-panel {
+  min-width: 260px;
+}
+
+#form-panel {
+  min-width: 280px;
+}
+
+#palette,
+#brushes {
+  display: grid;
+  grid-template-columns: repeat(5, 48px);
+  gap: 10px;
+  margin-top: 0;
+}
+
+.swatch,
+.brush-btn {
+  width: 48px;
+  height: 48px;
+  border: 3px solid #1f2abf;
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.swatch {
+  background: transparent;
+}
+
+.custom-swatch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.custom-swatch input[type="color"] {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.brush-btn {
+  background: #d7fab6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  display: block;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.dot-small {
+  width: 10px;
+  height: 10px;
+}
+
+.dot-medium {
+  width: 18px;
+  height: 18px;
+}
+
+.dot-large {
+  width: 26px;
+  height: 26px;
+}
+
+.swatch.active,
+.brush-btn.active {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+#controls button {
+  background: #034a0d;
+  color: #d7fab6;
+  cursor: pointer;
+  transition: background 0.2s;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+}
+
+#controls button:hover {
+  background: transparent;
+  border: 1px solid #034a0d;
+  color: #034a0d;
+}
+
+#form-panel form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: #034a0d;
+}
+
+#form-panel label,
+#form-panel legend {
+  color: #034a0d;
+}
+
+#form-panel input[type="text"] {
+  padding: 0.6rem;
+  border: 1px solid #034a0d;
+  border-radius: 4px;
+  background: #fffff0;
+  color: #034a0d;
+  font-family: inherit;
+}
+
+#form-panel fieldset {
+  border: 1px solid #034a0d;
+  border-radius: 6px;
+  padding: 0.75rem;
+}
+
+#form-panel fieldset label {
+  display: block;
+  margin-top: 0.35rem;
+  cursor: pointer;
+}
+
+
+/* @media (max-width: 900px) {
+  #controls {
+    max-width: 100%;
+  }
+
+  #tools-panel,
+  #form-panel {
+    min-width: 100%;
+  }
+} */
+
+
+#prompt-btn {
+  margin-top: 0.75rem;
+}
+
+#prompt-text {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  color: #034a0d;
+  min-height: 2.5em;
+}
+
+#save-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 74, 13, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+#save-overlay.hidden {
+  display: none;
+}
+
+#save-overlay-content {
+  background: #d7fab6;
+  color: #034a0d;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 280px;
+}
+
+#save-overlay-content button {
+  margin: 0.5rem;
+}
+
+#controls button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
