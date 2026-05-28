@@ -6,16 +6,20 @@
   let brushSize = 5;
 
   const prompts = [
-    'What will cities look like in the future?',
-    'What kind of homes will people live in?',
-    'How will people travel in your future?',
+    'Draw yourself in 30 years.',
+    'What will cities look like in 50 years?',
+    'What will schools look like in 50 years?',
     'What will people wear in 50 years?',
-    'What does a peaceful future look like?',
-    'What kind of technology will shape tomorrow?',
-    'What does your ideal world feel like?',
-    'What kind of job will you dream of having?',
-    'How will people connect with each other?',
-    'What will art look like in the future?'
+    'Draw a scientific innovation from 50 years in the future',
+    'Draw a college student in 2060.',
+    'Draw the Earth in 2100.',
+    'What will greenspace look like in 50 years?',
+    'Draw a sustainable home 40 years from now.',
+    'Draw a garden in 2050.',
+    'What will agriculture look like in 50 years?',
+    'What will transportation look like in 50 years?',
+    'What will AI look like in 50 years?',
+    'Will we be on Earth in 2100? Or a different planet?'
   ];
 
   $(function () {
@@ -72,6 +76,17 @@
       $(this).addClass('active');
       strokeWeight(brushSize);
     });
+
+    $('.brush-btn').removeClass('active');
+    $('.brush-btn[data-size="5"]').addClass('active');
+
+    $('.swatch').not('.custom-swatch').removeClass('active');
+    $('.swatch[data-color="#000000"]').addClass('active');
+    $('#picker').val('#000000');
+    currentColor = '#000000';
+    brushSize = 5;
+    stroke(currentColor);
+    strokeWeight(brushSize);
 
     $('#save').on('click', async function () {
       const saveBtn = $(this);
