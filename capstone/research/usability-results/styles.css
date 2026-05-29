@@ -1,0 +1,30 @@
+body{
+    background-color: #FFFFF3;
+    color: #1E1E1E;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 50px;
+}
+
+h1{
+    font-family: "DM Mono", monospace;
+    font-size: 3rem;
+    color: #C81515;
+}
+
+h2{
+    font-family: "Hanken Grotesk", sans-serif;
+    color: #1E1E1E;
+}
+
+h3{
+    font-family: "DM Mono", monospace;
+    font-size: 2rem;
+    color: #C81515;
+}
+
+p{
+    font-family: "Hanken Grotesk", sans-serif;
+    color: #1E1E1E;
+    font-size: 18px;
+}
