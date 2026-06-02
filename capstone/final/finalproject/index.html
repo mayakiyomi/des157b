@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usability Test</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Hanken+Grotesk&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@2.2.2/lib/p5.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/parse/dist/parse.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div id="intro-overlay">
+    <div class="marquee-wrap">
+      <div class="marquee">
+        <span>DRAW YOUR FUTURE * DRAW YOUR FUTURE * DRAW YOUR FUTURE * DRAW YOUR FUTURE * </span>
+      </div>
+      <div class="marquee marquee-two">
+        <span>DRAW YOUR FUTURE * DRAW YOUR FUTURE * DRAW YOUR FUTURE * DRAW YOUR FUTURE * </span>
+      </div>
+    </div>
+    <!-- <p>What does the future look like to you? DRAW IT!</p> -->
+    <button id="begin-btn">let’s begin</button>
+  </div>
+
+  <main>
+    <div id="drawing-header">
+      <div class="drawing-marquee-wrap">
+        <div class="marquee">
+          <span>WHAT DOES THE FUTURE LOOK LIKE TO YOU? * WHAT DOES THE FUTURE LOOK LIKE TO YOU? * WHAT DOES THE FUTURE LOOK LIKE TO YOU? *S</span>
+        </div>
+      </div>
+    </div>
+
+    <section id="workspace">
+      <div id="main-row">
+        <section id="tools-panel">
+          <div id="palette">
+            <button class="swatch" data-color="#ffffff" style="background:#ffffff;"></button>
+            <button class="swatch" data-color="#ff1d1d" style="background:#ff1d1d;"></button>
+            <button class="swatch" data-color="#ff9a00" style="background:#ff9a00;"></button>
+            <button class="swatch" data-color="#ffd400" style="background:#ffd400;"></button>
+            <button class="swatch" data-color="#2aa83a" style="background:#2aa83a;"></button>
+            <button class="swatch" data-color="#2948d9" style="background:#2948d9;"></button>
+            <button class="swatch" data-color="#7b22c6" style="background:#7b22c6;"></button>
+            <button class="swatch" data-color="#000000" style="background:#000000;"></button>
+            <button class="swatch" data-color="#ff1493" style="background:#ff1493;"></button>
+            <label class="swatch custom-swatch">
+              <input type="color" id="picker" value="#ff00ff">
+            </label>
+          </div>
+    
+          <div id="brushes">
+            <button class="brush-btn" data-size="5">
+              <span class="dot dot-small"></span>
+            </button>
+            <button class="brush-btn" id="fill-btn" type="button">
+              <span class="fill-square"></span>
+            </button>
+            <button class="brush-btn" data-size="12">
+              <span class="dot dot-medium"></span>
+            </button>
+            <button class="brush-btn" id="eraser-btn" type="button">
+              <span class="eraser-icon">
+                <span class="eraser-band"></span>
+              </span>
+            </button>
+            <button class="brush-btn" data-size="24">
+              <span class="dot dot-large"></span>
+            </button>
+          </div>
+    
+          <button id="clear">CLEAR</button>
+        </section>
+    
+        <div id="canvas-column">
+          <div id="canvas-container"></div>
+          <div id="prompt-panel">
+            <div id="prompt-row">
+              <button id="prompt-btn" type="button">Click for inspiration!</button>
+              <p id="prompt-text">Click for inspiration!</p>
+            </div>
+          </div>
+        </div>
+        
+        <section id = 'nav-wrap'>
+          <section id="form-panel">
+            <form id="metaForm">
+              <label for="name">Artist name</label>
+              <input type="text" id="name" placeholder="Your name" required>
+      
+              <fieldset>
+                <legend>Artist age</legend>
+                <label><input type="radio" name="artistAge" value="17 and below" checked> 17 and below</label>
+                <label><input type="radio" name="artistAge" value="18-29"> 18-29</label>
+                <label><input type="radio" name="artistAge" value="30-45"> 30-45</label>
+                <label><input type="radio" name="artistAge" value="46 and above"> 46 and above</label>
+              </fieldset>
+      
+              <label for="title">Title of piece</label>
+              <input type="text" id="title" placeholder="Artwork title" required>
+      
+              <button id="save" type="button">SAVE DRAWING</button>
+            </form>
+          </section>
+          <button>GO TO GALLERY</button>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div id="save-overlay" class="hidden">
+    <div id="save-overlay-content">
+      <h2>Saved!</h2>
+      <p>Your drawing was added to the gallery.</p>
+      <button id="draw-more-btn" type="button">Draw More</button>
+      <button id="go-gallery-btn" type="button">Go to Gallery</button>
+    </div>
+  </div>
+</body>
+</html>
