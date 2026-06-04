@@ -1,7 +1,11 @@
-body {
-  font-family: 'Hanken Grotesk', sans-serif;
+html, body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
   background: #034a0d;
   color: #d7fab6;
 }
@@ -17,8 +21,16 @@ main {
 
 #drawing-header {
   width: 100%;
-  max-width: 1400px;
-  margin: 10px auto 0;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+
+.drawing-marquee-wrap {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 10px;
 }
 
 #workspace {
@@ -99,13 +111,6 @@ main {
   margin-top: 35vh;
 }
 
-.drawing-marquee-wrap {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  margin-top: 30px;
-}
-
 .marquee {
   display: inline-block;
   width: max-content;
@@ -142,20 +147,17 @@ main {
   transition: all 0.2s ease-in-out;
 }
 
+#prompt-btn:hover,
+#go-gallery-btn:hover,
 #begin-btn:hover {
   background: #d7fab6;
   color: #034a0d;
+  cursor: pointer;
 }
 
-#drawing-header {
-  margin-top: 10px;
-}
-
-#prompt-btn,
 #clear,
 #save,
 #draw-more-btn,
-#go-gallery-btn,
 #back-btn {
   font-family: 'Hanken Grotesk', sans-serif;
   font-size: 0.95rem;
@@ -167,11 +169,9 @@ main {
   color: #034a0d;
 }
 
-#prompt-btn:hover,
 #clear:hover,
 #save:hover,
 #draw-more-btn:hover,
-#go-gallery-btn:hover,
 #back-btn:hover {
   background: #034a0d;
   color: #d7fab6;
@@ -232,11 +232,17 @@ main {
   overflow: hidden;
   background: linear-gradient(135deg, #ffffff, #ff1d1d, #ff9a00, #ffd400, #2aa83a, #2948d9, #7b22c6, #000000);
   transition: transform 0.2s ease-in-out, outline 0.2s ease-in-out;
+  position: relative;
 }
 
 .custom-swatch.active {
-  outline: 3px solid #d7fab6;
-  outline-offset: 3px;
+  outline: 2px solid #034a0d;
+  outline-offset: 2px;
+}
+
+.custom-swatch:focus-within {
+  outline: 2px solid #034a0d;
+  outline-offset: 2px;
 }
 
 .custom-swatch input[type="color"] {
@@ -341,6 +347,13 @@ main {
   margin-top: 0;
 }
 
+#form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
+
 #form-panel form {
   display: flex;
   flex-direction: column;
@@ -381,6 +394,7 @@ main {
   font-weight: 700;
 }
 
+
 #prompt-panel {
   margin-top: 2rem;
   width: 100%;
@@ -389,21 +403,25 @@ main {
   background: transparent;
   border: 1px solid #d7fab6;
   border-radius: 6px;
-  padding: 0.75rem;
+  padding: 1rem;
   color: #d7fab6;
+  gap: 50px;
 }
 
 #prompt-row {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 2rem;
 }
 
-#prompt-btn {
+#prompt-btn, 
+#go-gallery-btn {
   margin: 0;
   padding: 0.75rem 1rem;
   color: #d7fab6;
   border: 1px solid #d7fab6;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px;
   background: transparent;
   white-space: nowrap;
 }

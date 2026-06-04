@@ -38,8 +38,10 @@
   function fillCanvas() {
     canvasBackground = currentColor;
     background(canvasBackground);
-    setBrushMode();
-    selectToolButton($('.brush-btn[data-size="5"]'));
+  }
+
+  function getRandomPrompt() {
+    return prompts[Math.floor(Math.random() * prompts.length)];
   }
 
   $(function () {
@@ -48,8 +50,7 @@
     });
 
     $('#prompt-btn').on('click', function () {
-      const randomPrompt = prompts[Math.floor(Math.random() * prompts.length)];
-      $('#prompt-text').text(randomPrompt);
+      $('#prompt-text').text(getRandomPrompt());
     });
 
     $('#draw-more-btn').on('click', function () {
@@ -57,6 +58,8 @@
       canvasBackground = 'white';
       background(canvasBackground);
       $('#save').prop('disabled', false).text('SAVE DRAWING');
+      setBrushMode();
+      selectToolButton($('.brush-btn[data-size="5"]'));
     });
 
     $('#go-gallery-btn').on('click', function () {
@@ -80,9 +83,9 @@
       canvasBackground = 'white';
       background(canvasBackground);
       setBrushMode();
-      selectToolButton($('.brush-btn[data-size="5"]'));
       brushSize = 5;
       strokeWeight(brushSize);
+      selectToolButton($('.brush-btn[data-size="5"]'));
     });
 
     $('#fill-btn').on('click', function () {
@@ -101,25 +104,28 @@
       brushSize = Number($(this).data('size'));
       currentTool = 'brush';
       fillMode = false;
-      $('.brush-btn').removeClass('active');
-      $(this).addClass('active');
+      selectToolButton($(this));
       strokeWeight(brushSize);
     });
 
-    $('.swatch').not('.custom-swatch').on('click', function () {
+    $('.swatch').not('.custom-swatch').on('click', function (e) {
+      e.stopPropagation();
       currentColor = $(this).data('color');
       $('#picker').val(currentColor);
       $('.swatch').not('.custom-swatch').removeClass('active');
       $('.custom-swatch').removeClass('active');
       $(this).addClass('active');
+      stroke(currentColor);
     });
 
-    $('#picker').on('input', function () {
+    $('#picker').on('input', function (e) {
+      e.stopPropagation();
       currentColor = $(this).val();
       $('.swatch').not('.custom-swatch').removeClass('active');
       $('.custom-swatch').addClass('active');
-      $('.custom-swatch').css('background', currentColor);
+      stroke(currentColor);
     });
+
     $('.brush-btn').removeClass('active');
     $('.brush-btn[data-size="5"]').addClass('active');
 
@@ -170,7 +176,13 @@
   };
 
   window.mousePressed = function () {
-    if (fillMode) {
+    if (
+      fillMode &&
+      mouseX >= 0 &&
+      mouseX <= width &&
+      mouseY >= 0 &&
+      mouseY <= height
+    ) {
       fillCanvas();
     }
   };
@@ -179,10 +191,10 @@
     if (currentTool === 'eraser') {
       noStroke();
       fill(canvasBackground);
-  
+
       const d = dist(pmouseX, pmouseY, mouseX, mouseY);
       const steps = Math.ceil(d / 2.5);
-  
+
       for (let i = 0; i <= steps; i++) {
         const x = lerp(pmouseX, mouseX, i / steps);
         const y = lerp(pmouseY, mouseY, i / steps);

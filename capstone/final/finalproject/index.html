@@ -29,20 +29,19 @@
         <span>DRAW YOUR FUTURE * DRAW YOUR FUTURE * DRAW YOUR FUTURE * DRAW YOUR FUTURE * </span>
       </div>
     </div>
-    <p>Hi, thanks for helping to test this project! Please try to:</p>
-    <p>Thanks!</p>
+    <p>What does it look like to you?</p>
     <button id="begin-btn">let’s begin</button>
+  </div>
+  
+  <div id="drawing-header">
+    <div class="drawing-marquee-wrap">
+      <div class="marquee">
+        <span>WHAT DOES THE FUTURE LOOK LIKE TO YOU? * WHAT DOES THE FUTURE LOOK LIKE TO YOU? * WHAT DOES THE FUTURE LOOK LIKE TO YOU? * WHAT DOES THE FUTURE LOOK LIKE TO YOU? *</span>
+      </div>
+    </div>
   </div>
 
   <main>
-    <div id="drawing-header">
-      <div class="drawing-marquee-wrap">
-        <div class="marquee">
-          <span>DRAW YOUR FUTURE * DRAW YOUR FUTURE * DRAW YOUR FUTURE * DRAW YOUR FUTURE * </span>
-        </div>
-      </div>
-    </div>
-
     <section id="workspace">
       <div id="main-row">
         <section id="tools-panel">
@@ -94,25 +93,27 @@
             </div>
           </div>
         </div>
+        <section id = 'form-section'>
+          <section id="form-panel">
+            <form id="metaForm">
+              <label for="name">Artist name</label>
+              <input type="text" id="name" placeholder="Your name" required>
 
-        <section id="form-panel">
-          <form id="metaForm">
-            <label for="name">Artist name</label>
-            <input type="text" id="name" placeholder="Your name" required>
+              <fieldset>
+                <legend>Artist age</legend>
+                <label><input type="radio" name="artistAge" value="17 and below" checked> 17 and below</label>
+                <label><input type="radio" name="artistAge" value="18-29"> 18-29</label>
+                <label><input type="radio" name="artistAge" value="30-45"> 30-45</label>
+                <label><input type="radio" name="artistAge" value="46 and above"> 46 and above</label>
+              </fieldset>
 
-            <fieldset>
-              <legend>Artist age</legend>
-              <label><input type="radio" name="artistAge" value="17 and below" checked> 17 and below</label>
-              <label><input type="radio" name="artistAge" value="18-29"> 18-29</label>
-              <label><input type="radio" name="artistAge" value="30-45"> 30-45</label>
-              <label><input type="radio" name="artistAge" value="46 and above"> 46 and above</label>
-            </fieldset>
+              <label for="title">Title of piece</label>
+              <input type="text" id="title" placeholder="Artwork title" required>
 
-            <label for="title">Title of piece</label>
-            <input type="text" id="title" placeholder="Artwork title" required>
-
-            <button id="save" type="button">SAVE DRAWING</button>
-          </form>
+              <button id="save" type="button">SAVE DRAWING</button>
+            </form>
+          </section>
+          <button id = 'go-gallery-btn'>GO TO GALLERY</button>
         </section>
       </div>
     </section>
