@@ -117,7 +117,9 @@
       $(this).addClass('active');
       stroke(currentColor);
     });
-
+    $('#gallery-btn').on('click', function () {
+      window.location.href = 'gallery.html';
+    });
     $('#picker').on('input', function (e) {
       e.stopPropagation();
       currentColor = $(this).val();

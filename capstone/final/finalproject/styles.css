@@ -148,7 +148,7 @@ main {
 }
 
 #prompt-btn:hover,
-#go-gallery-btn:hover,
+#gallery-btn:hover,
 #begin-btn:hover {
   background: #d7fab6;
   color: #034a0d;
@@ -158,6 +158,7 @@ main {
 #clear,
 #save,
 #draw-more-btn,
+#go-gallery-btn,
 #back-btn {
   font-family: 'Hanken Grotesk', sans-serif;
   font-size: 0.95rem;
@@ -172,6 +173,7 @@ main {
 #clear:hover,
 #save:hover,
 #draw-more-btn:hover,
+#go-gallery-btn:hover,
 #back-btn:hover {
   background: #034a0d;
   color: #d7fab6;
@@ -415,7 +417,7 @@ main {
 }
 
 #prompt-btn, 
-#go-gallery-btn {
+#gallery-btn {
   margin: 0;
   padding: 0.75rem 1rem;
   color: #d7fab6;
