@@ -38,7 +38,8 @@
 
   function closeOverlay() {
     overlay.classList.add('hidden');
-    overlayImage.src = '';
+    overlayImage.removeAttribute('src');
+    overlayImage.alt = '';
   }
 
   async function loadGallery() {
