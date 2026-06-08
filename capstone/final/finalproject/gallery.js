@@ -38,7 +38,7 @@
 
   function closeOverlay() {
     overlay.classList.add('hidden');
-    overlayImage.removeAttribute('src');
+    overlayImage.src = 'data:,';
     overlayImage.alt = '';
   }
 
